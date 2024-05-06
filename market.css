@@ -3,75 +3,75 @@ body{
     padding: 0px;
     box-sizing: border-box;
 
-    font-family: san;
-    background-color: rgb(236, 233, 229);
+    font-family: sans-serif; 
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
 }
 
-div{
-    border: 1px solid ;
-}
-
-
-content{
-    width: 400px ;
+content {
+    width: 460px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+
 }
 
-.title{
-    width: 460px;
+/* div{
+    border: 1px solid darkgrey ;
+} */
+.title {
+    width: auto;
     padding: 10px;
     margin-top: 20px;
-
-    background: rgb(253, 48, 48);
+    
+    background:red ;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    color: #ffffff;
     text-transform: uppercase;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 3px;
 }
-
-
-.items{
+/* блок товарів */
+.items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.item{
-    min-height: 200px;
+/* блок окремого товару */
+.item {
+    min-width: 200px;
     min-height: 400px;
     margin-bottom: 10px;
     padding: 10px;
-
-    background-color: azure;
-
+    background-color: #ffffff;
     border: 1px solid rgb(194, 194, 194);
     border-radius: 5px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+   
 }
-
-.item-title{
+/* блок назва товару */
+.item-title {
     font-weight: bold;
 }
 
-.item-img{
+
+/* блок зображення товару */
+.item-image {
     height: 200px;
+   
+    
 }
 
-.parts-pay{
+/* блок з оплатою частинами */
+.parts-pay {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -79,11 +79,13 @@ content{
     justify-content: center;
 }
 
-.parts-pay img{
+/* зображення, які знаходяться в блоці оплати частинами */
+.parts-pay img {
     height: 24px;
+
 }
 
-/*блок ціни*/
+/* блок ціни */
 .price{
     border: 1px solid rgb(194, 194, 194);
     border-radius: 5px;
@@ -91,43 +93,66 @@ content{
     display: flex;
 }
 
-.price div:first-child{
+.price div:first-child {
     width: 100px;
-    font-size:20px;
+    font-size: 20px;
 }
 
-.price div:first-child span{
-    text-decoration-line: line-through;
+.price div :first-child span {
+    text-decoration: line-through;
 }
 
-.price div:first-child sup{
+.price div :first-child sup {
     font-size: 12px;
 }
 
-.price div:last-child{
+.price div:last-child {
     font-size: 24px;
 }
-
-.price div:last-child sup{
+.price div:last-child sup {
     font-size: 14px;
 }
 
-/*блок контактів*/
-.contacts p{
+/* блок бонусної ціни */
+.bonus {
+    background: red ;
+    color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bonus div:first-child {
+    width: 100px;
+    font-size: 14px;
+}
+
+.bonus:last-child {
+    font-size: 24px;
+}
+
+.bonus:last-child sup {
+    font-size: 14px;
+}
+
+
+/* блок контактів */
+
+.contacts p {
     margin: 3px;
 }
 
-.contacts p:first-child{
+.contacts p:first-child {
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.contacts p:last-child{
-    border-left: 3px solid rgb(253, 48, 48);
+.contacts p:last-child {
+    border-left: 3px solid red;
 }
 
-/*інформація*/
-.ifo{
+/* блок інформації */
+.info {
     font-size: 9px;
     text-align: justify;
     color: rgb(120, 120, 120);

@@ -1,4 +1,11 @@
 body {
-
-    
+background-color:antiquewhite ;
 }
+
+.name {
+    font-size: 35px;
+    color: white;
+    margin-left: 585px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  

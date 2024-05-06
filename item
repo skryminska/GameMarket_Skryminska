@@ -1,0 +1,25 @@
+ <div clas="item">
+                <!--назва товару-->
+                <div class="item-title">Газонокосилка</div>
+
+                <div class="item-img">
+                    <img scr="img/2.png" alt="Газонокосилка">
+                </div>
+                <!--блок оплата частинами-->
+                <div class="parts-pay">
+                    <div><img scr="img-merket/mono" alt="">6</div>
+                    <div><img scr="img-merket/pb" alt="">8</div>
+                </div>
+                <!--блок ціни-->
+                <div class="price">
+                  <div><span>5000</span><sup>грн</sup></div>
+                  <div><span>4690</span><sup>грн</sup></div>
+                </div>
+                <div class="price-bonus">
+                    <div>ціна за купоном</div>
+                    <div><span>4980</span><sup>грн</sup></div>
+                </div>
+                </div>
+            <div class="item">Бензопила</div>
+            <div class="item">Мотокоса</div>
+            <div class="item">Акумулятор обприскувач</div>

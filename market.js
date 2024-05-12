@@ -38,3 +38,8 @@ if (itemsDiv) {
     //Вивід знайденого елементу
     console.log('Блок товарів не знайдено')
 }
+
+//визначення масиву товарів 
+let itemsArray=['','','','']
+
+//console.log(itemsArray)

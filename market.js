@@ -1,10 +1,10 @@
 
 
 //перевірка підключеного файлу скриптів
-console.log('Перевірка підключеного файлу скрипту market.js')
+//console.log('Перевірка підключеного файлу скрипту market.js')
 
 //Отримання елементу з ідентифікатором items
-let itemsDiv = document.getElementById("items")
+//let itemsDiv = document.getElementById("items")
 
 //визначення масиву товарів 
 // let itemsArray = [
@@ -14,6 +14,73 @@ let itemsDiv = document.getElementById("items")
 //     'Акумуляторний оприскувач 12 N'
 // ]
 
+let itemsArray = [
+   {
+    firstName:"Віталій",
+    lastName:"",
+    age: 35,
+    subject: "CS",
+    photo: "https://lyceum.ztu.edu.ua/wp-content/uploads/2023/03/dsc07815-683x1024.jpg",
+    url: "https://lyceum.ztu.edu.ua/team/shatkivskyy-v-m/", 
+   }, 
+   {
+    firstName: "Наталія",
+    lastName: "Венцель",
+    age: 40,
+    subject:"Директорка",
+    photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/ventsel-nataliya-vasylivna-683x1024.jpg",
+    url:"https://lyceum.ztu.edu.ua/team/ventsel-n-v/",
+   },
+   {
+    firstName: "",
+    lastName: "",
+    age:38,
+    subject:"",
+    photo:"",
+    url:"",
+   },
+   {
+    firstName: "",
+    lastName: "",
+    age: 43,
+    subject:"",
+    photo:"",
+    url:"",
+   },
+
+]
+
+//отримання елементу з індифікатором items
+let itemsDiv  = document.getElementById("items");
+
+//checing on 
+if (itemsDiv) {
+    //creating blocks by quantity of elements
+    itemsArray
+    //sorting by lastnames
+    //.sort((a,b) => a.lastName.localeCompare(b.lastName))
+    //
+        .forEach((item,index) => (
+            //виводимо 
+            itemsDiv.innerHTML +=
+            `
+            <div class = "item">
+            <h2>Teacher № ${index+1} з ${itemsArray.length}</h2>
+            <p>${item.firstName} ${item.lastName}</p>
+            <p>Предмет: ${item.subject}</p>
+            <p><img src = "${item.photo}" class = "item-image"></p>
+            <p><a href = ${item.url}" target = "_blank" class = "bonus price">Профіль</a></p>
+            <p><a href = "mailto:${item.email}?subject=Питання&body=Доброго дня" target = "_blank"
+            class = "price"> Написати </a></p>
+        
+            </div>
+            `
+        ))
+} else{
+    //вивід повідомлення про не знай 
+    console.log('Блок товарів не знайдено')
+}
+
 //сортування масиву
 // itemsArray = itemsArray.sort()
 
@@ -22,9 +89,9 @@ let itemsDiv = document.getElementById("items")
 //onsole.log(itemsDiv)
 
 //Перевірка існування знайденого блоку
-if (itemsDiv) {
+//if (itemsDiv) {
     //Вивід знайденого елементу
-    console.log(itemsDiv)
+   // console.log(itemsDiv)
 
     //Вивід значення поля знайденого елементу
     // console.log('Поле classList:', itemsDiv.classList)
@@ -42,14 +109,14 @@ if (itemsDiv) {
     // itemsDiv.innerHTML += '<div  class = "item"></div>'
     // itemsDiv.innerHTML += '<div  class = "item"></div>'
     // itemsDiv.innerHTML += '<div  class = "item"></div>'
-    for(let i = 0; i < 100; i++) {
-        itemsDiv.innerHTML += '<div class="item"></div>'
-    }
+    //for(let i = 0; i < 100; i++) {
+       // itemsDiv.innerHTML += '<div class="item"></div>'
+    //}
 
-} else {
+//} else {
     //Вивід знайденого елементу
-    console.log('Блок товарів не знайдено')
-}
+    //console.log('Блок товарів не знайдено')
+//}
 
 // //виведення елементів відсортованого масиву
 // itemsArray.sort().forEach((item, index) =>{

@@ -6,8 +6,20 @@ console.log('Перевірка підключеного файлу скрипт
 //Отримання елементу з ідентифікатором items
 let itemsDiv = document.getElementById("items")
 
+//визначення масиву товарів 
+// let itemsArray = [
+//     'Газонокосарка 43',
+//     'Електричний тример 110',
+//     'Електрична газонокосарка 32',
+//     'Акумуляторний оприскувач 12 N'
+// ]
+
+//сортування масиву
+// itemsArray = itemsArray.sort()
+
+
 //Вивід знайдкного елементу
-console.log(itemsDiv)
+//onsole.log(itemsDiv)
 
 //Перевірка існування знайденого блоку
 if (itemsDiv) {
@@ -39,7 +51,29 @@ if (itemsDiv) {
     console.log('Блок товарів не знайдено')
 }
 
-//визначення масиву товарів 
-let itemsArray=['','','','']
+// //виведення елементів відсортованого масиву
+// itemsArray.sort().forEach((item, index) =>{
+//     console.log(index + '-й елемент', item)
+// })
 
-//console.log(itemsArray)
+//виведення елементів відсорт. масиву 
+// itemsArray.sort().forEach((item, index) =>{
+//     console.log(index + '-й елемент', item)
+// })
+
+//виведення в консоль масиву
+    // console.log(itemsArray)
+
+
+//вив. в консоль номерів та значень елементів масиву 
+// for(let i = 0; i < itemsArray.length; i++) {
+//          console.log( i + '-й елемент:', itemsArray[i])
+//      }
+
+
+//виведення в консоль масиву
+// console.log(itemsArray)
+// for(let i = 0; i < 100; i++) 
+//     itemsDiv.innerHTML += '<div class="item"></div>'
+ //     console.log('item')
+//     }

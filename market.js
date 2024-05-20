@@ -8,45 +8,81 @@
 
 //визначення масиву товарів 
 // let itemsArray = [
-//     'Газонокосарка 43',
+//     'Мотокоса 43',
 //     'Електричний тример 110',
 //     'Електрична газонокосарка 32',
 //     'Акумуляторний оприскувач 12 N'
 // ]
 
 let itemsArray = [
-   {
-    firstName:"Віталій",
-    lastName:"",
-    age: 35,
-    subject: "CS",
-    photo: "https://lyceum.ztu.edu.ua/wp-content/uploads/2023/03/dsc07815-683x1024.jpg",
-    url: "https://lyceum.ztu.edu.ua/team/shatkivskyy-v-m/", 
-   }, 
-   {
-    firstName: "Наталія",
-    lastName: "Венцель",
-    age: 40,
-    subject:"Директорка",
-    photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/ventsel-nataliya-vasylivna-683x1024.jpg",
-    url:"https://lyceum.ztu.edu.ua/team/ventsel-n-v/",
-   },
-   {
-    firstName: "Олена",
-    lastName: "Геча",
-    age:38,
-    subject:"Історія",
-    photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/hecha-olena-anatoliyivna-683x1024.jpg",
-    url:"https://lyceum.ztu.edu.ua/team/hecha-o-a/",
-   },
-   {
-    firstName: "Вікторія",
-    lastName: "Нелипович",
-    age: 43,
-    subject:"Математика",
-    photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/nelypovych-viktoriya-vitaliyivna-683x1024.jpg",
-    url:"https://lyceum.ztu.edu.ua/team/nelypovych-viktoriya-vitaliyivna/",
-   },
+    {
+        title:"Мотокоса 43",
+        image:'img/1.webp',
+        mono: 4,
+        pb: 8,
+        prise_standart: 5499,
+        prise_discount:4497,
+        prise_coupon:4395,
+    },
+    {
+        title:"Електричний тример 110",
+        image:'img/2.webp',
+        mono: 5,
+        pb: 10,
+        prise_standart:4497,
+        prise_discount:3498,
+        prise_coupon:3396,
+    },
+    {
+        title:"Електрична газонокосарка 32",
+        image:'img/3.webp',
+        mono: 8,
+        pb: 11,
+        prise_standart:4497,
+        prise_discount:3297,
+        prise_coupon:3185,
+    },
+    {
+        title:"Акумуляторний оприскувач 12 N",
+        image:'img/4.webp',
+        mono: 6,
+        pb: 12,
+        prise_standart:2190,
+        prise_discount:1698,
+        prise_coupon:1596,
+    },
+//    {
+//     firstName:"Віталій",
+//     lastName:"",
+//     age: 18,
+//     subject: "CS",
+//     photo: "https://lyceum.ztu.edu.ua/wp-content/uploads/2023/03/dsc07815-683x1024.jpg",
+//     url: "https://lyceum.ztu.edu.ua/team/shatkivskyy-v-m/", 
+//    }, 
+//    {
+//     firstName: "Наталія",
+//     lastName: "Венцель",
+//     age: 40,
+//     subject:"Директорка",
+//     photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/ventsel-nataliya-vasylivna-683x1024.jpg",
+//     url:"https://lyceum.ztu.edu.ua/team/ventsel-n-v/",
+//    },
+//    {
+//     firstName: "Олена",
+//     lastName: "Геча",
+//     age:18,
+//     subject:"Історія",
+//     photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/hecha-olena-anatoliyivna-683x1024.jpg",
+//     url:"https://lyceum.ztu.edu.ua/team/hecha-o-a/",
+//    },
+//    {
+//     firstName: "Вікторія",
+//     lastName: "Нелипович",
+//     age: 18,
+//     subject:"Математика",
+//     photo:"https://lyceum.ztu.edu.ua/wp-content/uploads/2023/04/nelypovych-viktoriya-vitaliyivna-683x1024.jpg",
+//     url:"https://lyceum.ztu.edu.ua/team/nelypovych-viktoriya-vitaliyivna/",
+//    },
 
 ]
 
@@ -64,16 +100,25 @@ if (itemsDiv) {
             //виводимо 
             itemsDiv.innerHTML +=
             `
-            <div class = "item">
-            <h2>Teacher № ${index+1} з ${itemsArray.length}</h2>
-            <p>${item.firstName} ${item.lastName}</p>
-            <p>Предмет: ${item.subject}</p>
-            <p><img src = "${item.photo}" class = "item-image"></p>
-            <p><a href = ${item.url}" target = "_blank" class = "bonus price">Профіль</a></p>
-            <p><a href = "mailto:${item.email}?subject=Питання&body=Доброго дня" target = "_blank"
-            class = "price"> Написати </a></p>
-        
+            <div class="item">
+                <div class="item-title">${item.title}</div>
+                <div class="item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="parts-pay">
+                    <div><img src="img/monolapka.png" alt="">${item.mono}</div>
+                    <div><img src="img/pb.jpg" alt="">${item.pb}</div>
+                </div>
+                <div class="price">
+                    <div><span>${item.prise_standart}</span><sup>грн</sup></div>
+                    <div><span>${item.prise_discount}</span><sup>грн</sup></div>
+                </div>
+                <div class="price bonus">
+                    <div>Ціна за купоном</div>
+                    <div><span>${item.prise_coupon}</span><sup>грн</sup></div>
+                </div>
             </div>
+
             `
         ))
 } else{

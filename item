@@ -23,3 +23,19 @@
             <div class="item">Бензопила</div>
             <div class="item">Мотокоса</div>
             <div class="item">Акумулятор обприскувач</div>
+
+
+
+
+
+
+            // <div class = "item">
+            // <h2>Teacher № ${index+1} з ${itemsArray.length}</h2>
+            // <p>${item.firstName} ${item.lastName}</p>
+            // <p>Предмет: ${item.subject}</p>
+            // <p><img src = "${item.photo}" class = "item-image"></p>
+            // <p><a href = ${item.url}" target = "_blank" class = "bonus price">Профіль</a></p>
+            // <p><a href = "mailto:${item.email}?subject=Питання&body=Доброго дня" target = "_blank"
+            // class = "price"> Написати </a></p>
+        
+            </div>
